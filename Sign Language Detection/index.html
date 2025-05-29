@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Hand Gesture Recognition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-image: url("bg2.png");
+        }
+        h1 {
+            color: #333;
+            transform: translate(0px, 80px);
+        }
+        #video-stream {
+            border: 4px solid #145078;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            transform: translate(0px, 70px);
+        }
+        p {
+            margin-top: 10px;
+            color: #242222;
+            transform: translate(0px, 70px);
+        }
+        ul{
+            padding-right: 10px;
+            transform: translate(-70px, 0px);
+        }
+        .navlinks li{
+	        list-style: none;
+	        display: inline-block;
+        }
+        .navlinks li a{
+	        position: relative;
+	        color: white;
+	        font-size: 18px;
+	        font-weight: bold;
+	        margin-right: 25px;
+	        text-decoration: none;
+        }
+        .navlinks li a::after{
+	        content: '';
+	        position: absolute;
+	        left: 0;
+	        bottom: -5px;
+	        width: 0%;
+	        height: 2px;
+	        background-color: white;
+	        transition: width 0.3s ease-in-out;
+        }
+        .navlinks li a:hover::after{
+	        width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" style="background: rgba(57, 78, 149, 1); font-family: calibri; padding-right: 20px; padding-left: 0px; position: fixed; width: 100%; top: 0; left: 0;">
+		<div class="navdiv" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 45px; width: 100%;">
+			<div class="logo" style="display: flex; align-items: center;"><img src="templates/logo.png" alt="logo" style="height: 65px; width: 65px; margin-right: 20px; padding-top: 0; cursor: pointer;"><a href="#" style="font-size: 35px; font-weight: 600; color: white; list-style: none; text-decoration: none">JELLY-AID</a></div>
+			<ul class="navlinks">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Challenges</a></li>
+				<li><a href="#">Profile</a></li>
+			</ul>
+		</div>
+	</nav>
+        <h1>Sign Language Camera</h1>
+        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Gesture Recognition Stream" width="900" height="700">
+        <p class="word">Perform gestures in front of your webcam!</p>
+
+</body>
+</html>
