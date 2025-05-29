@@ -1,0 +1,309 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link rel="stylesheet" type="text/css" href="user.css" />
+
+    <title>User Profile</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar"
+      style="
+        background: rgba(57, 78, 149, 1);
+        font-family: calibri;
+        padding-right: 20px;
+        padding-left: 0px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      "
+    >
+      <div
+        class="navdiv"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 45px;
+          width: 100%;
+        "
+      >
+        <div class="logo" style="display: flex; align-items: center">
+          <img
+            src="logo.png"
+            style="
+              height: 65px;
+              width: 65px;
+              margin-right: 20px;
+              padding-top: 0;
+              cursor: pointer;
+            "
+          /><a href="#" style="font-size: 35px; font-weight: 600; color: white"
+            >JELLY-AID</a
+          >
+        </div>
+        <ul class="navlinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Challenges</a></li>
+          <li>
+            <a href=" https://5a1d-2001-fd8-17c5-d65-441b-aad-5dc5-ac3d.ngrok-free.app/"
+              >Camera</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      style='font-family: Manrope, "Noto Sans", sans-serif; padding-top: 100px; background-color: #E0E4F3;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="@container">
+              <div class="@[480px]:px-4 @[480px]:py-3">
+                <div
+                  class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white @[480px]:rounded-xl min-h-[218px]"
+                  style='background-image: url("header.jpg");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex p-4 @container" style="margin-top: -80px">
+              <div class="flex w-full flex-col gap-4 items-center">
+                <div class="flex gap-4 flex-col items-center">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                    style='background-image: url("profile.jpg");'
+                  ></div>
+                  <div
+                    class="flex flex-col items-center justify-center justify-center"
+                  >
+                    <p
+                      class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center"
+                    >
+                      Yuki Itose
+                    </p>
+                    <p
+                      class="text-[#60768a] text-base font-normal leading-normal text-center"
+                    >
+                      @yuki_itose
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3 px-4 py-3">
+              <div
+                class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#8596D5] bg-[#ECF0FF] p-3 items-center text-center" 
+              >
+                <p class="text-[#111518] tracking-light text-2xl font-bold leading-tight">
+                  123
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-[#60768a] text-sm font-normal leading-normal">
+                    Followers
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#8596D5] bg-[#ECF0FF] p-3 items-center text-center"
+              >
+                <p class="text-[#111518] tracking-light text-2xl font-bold leading-tight">
+                  456
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-[#60768a] text-sm font-normal leading-normal">
+                    Following
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h2
+              class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            >
+              Overview
+            </h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div
+                class="flex flex-1 gap-3 rounded-lg border border-[#dbe1e6] bg-white p-4 items-center border-2 border-solid border-gray-300" style="background-color: #ECF0FF;"
+              >
+                <div
+                  class="text-[#111518]"
+                  data-icon="Fire"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M183.89,153.34a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68ZM216,144a88,88,0,0,1-176,0c0-27.92,11-56.47,32.66-84.85a8,8,0,0,1,11.93-.89l24.12,23.41,22-60.41a8,8,0,0,1,12.63-3.41C165.21,36,216,84.55,216,144Zm-16,0c0-46.09-35.79-85.92-58.21-106.33L119.52,98.74a8,8,0,0,1-13.09,3L80.06,76.16C64.09,99.21,56,122,56,144a72,72,0,0,0,144,0Z"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-[#111518] text-base font-bold leading-tight">
+                  103 Day streak
+                </h2>
+              </div>
+              <div
+                class="flex flex-1 gap-3 rounded-lg border border-[#dbe1e6] p-4 items-center border-2 border-solid border-gray-300" style="background-color: #ECF0FF;"
+              >
+                <div
+                  class="text-[#111518]"
+                  data-icon="Star"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-[#111518] text-base font-bold leading-tight">
+                  27903 Total XP
+                </h2>
+              </div>
+              <div
+                class="flex flex-1 gap-3 rounded-lg border border-[#dbe1e6] bg-white p-4 items-center border-2 border-solid border-gray-300" style="background-color: #ECF0FF;"
+              >
+                <div
+                  class="text-[#111518]"
+                  data-icon="Medal"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-[#111518] text-base font-bold leading-tight">
+                  Gold League
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              A passionate learner exploring the world of languages and cultures. Currently focused on mastering sign language and expanding my linguistic horizons. Always eager to
+              connect with fellow language enthusiasts and share knowledge.
+            </p>
+            <h2
+              class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            >
+              Contact
+            </h2>
+            <div class="p-4 grid grid-cols-[80%_1fr] gap-x-70">
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#616E9C] py-5">
+                <p class="text-[#60768a] text-sm font-normal leading-normal" style="padding-left: 20px;">Email</p>
+                <p class="text-[#111518] text-sm font-normal leading-normal"style="padding-left: 20px;">
+                  yukiitose@gmail.com
+                </p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#616E9C] py-5">
+                <p class="text-[#60768a] text-sm font-normal leading-normal" style="padding-left: 20px;">Phone</p>
+                <p class="text-[#111518] text-sm font-normal leading-normal" style="padding-left: 40px;">
+                  +63 917-123-4567
+                </p>
+              </div>
+            </div>
+            <h2
+              class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            >
+              Recents
+            </h2>
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-xl border-2 border-[#dbe1e6] border-solid border-gray-300 bg-[#ECF0FF] p-4"
+              >
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#60768a] text-sm font-normal leading-normal">
+                      In progress
+                    </p>
+                    <p class="text-[#111518] text-base font-bold leading-tight">
+                      Learning Path: Basic American Sign Language
+                    </p>
+                    <p class="text-[#60768a] text-sm font-normal leading-normal">
+                      Learn the fundamentals of sign language, including basic signs and
+                      grammar.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f0f2f5] text-[#111518] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Continue</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("heh.png");'
+                ></div>
+              </div>
+            </div>
+            <hr />
+            <div class="p-4">
+              <div
+                class="flex items-stretch justify-between gap-4 rounded-xl border-2 border-solid border-gray-300 bg-[#ECF0FF] p-4"
+              >
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#60768a] text-sm font-normal leading-normal">
+                      In progress
+                    </p>
+                    <p class="text-[#111518] text-base font-bold leading-tight">
+                      Course: Spell the Alphabet
+                    </p>
+                    <p class="text-[#60768a] text-sm font-normal leading-normal">
+                      Master the alphabet in sign language with interactive lessons and
+                      quizzes.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f0f2f5] text-[#111518] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Continue</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("heh2.png");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
