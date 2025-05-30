@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, intial-scale=1.0">
+    <title> Jelly-Aid LOGIN Form </title>
+    <link rel="stylesheet" href="Sign up css.css">
+  </head>
+  <body>
+  <h1>Jelly-Aid LOGIN Form</h1>
+    <!--Pop up Form-->
+    <div class="form-popup">
+      <div class="form-box login">
+        <div class="form-details">
+          <h2>Back</h2>
+          <p> JELLY-AID</p>
+          </div>
+          <div class="form-content">
+            <h3>Welcome to JELLY-AID!</h3>
+            <H4> Log in and learn because a person who use sign language has a unique perspective on the world, a perspective we should all seek to understand.</h4>
+            <form action="#">
+              <div class="input-field">
+                <input type="text">
+                <label>Username</label>
+              </div>
+              <div class="input-field">
+                <input type="text">
+                <label>Email Address</label>
+              </div>
+              <div class="input-field">
+                <input type="password">
+                <label>Password</label>
+              </div>
+            <div class="forgot-pass">
+              <label> Forgot Password? </label>
+              <a href="#">Click here</a>
+            </div>
+            <div class="container">
+              <a href="Login.html " class="button"> Log In </a> 
+            </div>
+            </form>
+            <div class="bottom-link">
+            Don't have an account?
+              <a href="Login.html">Sign Up</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+   
+ 
