@@ -1,0 +1,350 @@
+body{
+    margin: 0;
+    background: #e3e8ff;
+    overflow-x: hidden;
+}
+
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 101;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+}
+
+/* ----------------------------------------------- Navigation Bar ----------------------------------------------------- */
+.navbar{
+    background: #394e95b3;
+    font-family: calibri;
+    padding-right: 20px;
+    padding-left: 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 45px;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+.logo img{
+    height: 50px;
+    width: 65px;
+    margin-right: 20px;
+    padding-top:0;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    text-decoration: none;
+}
+li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+li a:hover::after{
+    width: 100%;
+}
+.button1,
+.button2{
+    margin-left: 18px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+    transition: width 0.3s ease, color 0.3s ease;
+}
+button a{
+    color: #1E3274;
+    font-weight: bold;
+    font-size: 15px;
+}
+button:hover{
+    background-color: #1E3274;
+    color: white;
+    transition: width 0.3s ease-in-out;
+}
+button a:hover{
+    background-color: #1E3274;
+    color: white;
+    transition: width 0.3s ease-in-out;
+}
+ 
+/* -------------------------------------------------- Search Bar ------------------------------------------------------ */
+ 
+ 
+.searchbar {    
+    position: absolute;
+    z-index: 99;
+    top: 100px;
+    left: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(4, 1, 37, 0.3);
+    outline-style: solid;
+    outline-color: rgb(159, 160, 199);
+    outline-width: thin;
+ 
+}
+ 
+.search-bar {
+    height: 50px;
+    width: 550px;
+    background: rgba(255, 255, 255);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+ 
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #000000;
+}
+ 
+::placeholder {
+    color: #5c6283;
+}
+ 
+.search-bar button img {
+    width: 30px;
+   
+}
+ 
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #555bac;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+ 
+}
+ 
+/* -------------------------------------------------- Item List ------------------------------------------------------- */
+ 
+.itemList {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: auto;
+    padding: 4rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;          
+}
+.itemList .container {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+ 
+.itemList .container>div {
+    padding: .10rem;
+    box-shadow: 1px 1px 10px rgba( 0, 0, 0, .5);
+}
+ 
+/* --------------------------------------------- Item List (Content) -------------------------------------------------- */
+ 
+.course,
+.learning {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    outline-style: solid;
+    outline-color: rgb(166, 167, 207);
+    outline-width: thin;
+}
+ 
+.course, .learning:hover {
+    transform: translateY(-10px);
+}
+ 
+.course .card-image,
+.learning .card-image {
+    position: relative;
+}
+ 
+.course .card-image img,
+.learning .card-image img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 22px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+ 
+.course .card-image .card-tag,
+.learning .card-image .card-tag {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: #6366f1;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.9)
+}
+ 
+.course .card-content,
+.learning .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px 25px;
+}
+ 
+.course .card-content .card-title,
+.learning .card-content .card-title {
+    color: #111111;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+ 
+.course .card-content .card-text,
+.learning .card-content .card-text {
+    color: #747474;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+ 
+.course .card-content .card-footer,
+.learning .card-content .card-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: auto;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+ 
+.course .card-footer .card-profile,
+.learning .card-footer .card-profile {
+    display: flex;
+    align-items: center;
+}
+ 
+.course .card-profile img,
+.learning .card-profile img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+.course .card-profile .card-profile-info,
+.learning .card-profile .card-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.course .card-profile .card-profile-name,
+.learning .card-profile .card-profile-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #202020;
+}
+ 
+.course .card-profile .card-profile-role,
+.learning .card-profile .card-profile-role {
+    font-size: 0.8rem;
+    color: #7a7a7a;
+}
+ 
+.course .card-footer .card-button,
+.learning .card-footer .card-button {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.81rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    box-shadow: 0 8px 15px rgba(56, 56, 73, 0.2);
+    transition: all 0.3s ease;
+}
+ 
+.course .card-footer .card-button,
+.learning .card-footer .card-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* --------------------------------------------------- Footer --------------------------------------------------------- */
+
+ 
+.copyright {
+    position: absolute;
+    z-index: 1000;
+    top: 400%;
+    align-items: center;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #1E3274;
+    padding: 5px 628.5px;
+}
+ 
