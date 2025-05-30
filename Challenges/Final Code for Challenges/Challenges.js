@@ -111,6 +111,8 @@ const resetQuizAndGoHome = () => {
     quizBox.classList.remove('active');
     resultBox.classList.remove('active');
     home.classList.remove('active');
+    const header1 = document.querySelector('.header1');
+    if (header1) header1.style.display = 'flex';
 
 
     shuffledQuestions = shuffleArray([...questionsForLevel]);
@@ -135,6 +137,8 @@ tryAgainBtn.onclick = () => {
     quizBox.classList.add('active');
     nextBtn.classList.remove('active');
     resultBox.classList.remove('active');
+    const header1 = document.querySelector('.header1');
+    if (header1) header1.style.display = 'flex';
 
     questionCount = 0;
     questionNumb = 1;
@@ -143,6 +147,7 @@ tryAgainBtn.onclick = () => {
     shuffledQuestions = shuffleArray([...questions]);
     showQuestions(questionCount);
     questionCounter(questionNumb);
+    
 
 }
 
