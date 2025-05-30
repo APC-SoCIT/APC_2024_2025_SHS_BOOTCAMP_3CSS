@@ -5,8 +5,8 @@ body {
 
 .form-popup {
    position: fixed;
-   top: 21%;
-   left: 21%;
+   top: 10%;
+   left: 15%;
    width: 1092px;
    height: 633px;
    background: #fff;
