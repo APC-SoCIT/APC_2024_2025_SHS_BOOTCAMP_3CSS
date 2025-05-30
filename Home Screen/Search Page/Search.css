@@ -241,7 +241,10 @@ button a:hover{
     padding: 5px 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: rgba(255, 255, 255, 0.9)
+    background: rgba(255, 255, 255, 0.9);
+    outline-style: solid;
+    outline-color: #6366f1;
+    outline-width: thin;
 }
  
 .course .card-content,
@@ -294,6 +297,9 @@ button a:hover{
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline-style: solid;
+    outline-color: #1E3274;
+    outline-width: thin;
 }
  
 .course .card-profile .card-profile-info,
@@ -340,7 +346,7 @@ button a:hover{
 .copyright {
     position: absolute;
     z-index: 1000;
-    top: 400%;
+    top: 500%;
     align-items: center;
     font-size: 15px;
     color: #ffffff;
