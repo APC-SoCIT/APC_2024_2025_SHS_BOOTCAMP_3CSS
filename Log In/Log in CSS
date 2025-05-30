@@ -1,0 +1,176 @@
+
+body {
+    background-color: #AEBEE8;
+}
+
+.form-popup {
+   position: fixed;
+   top: 21%;
+   left: 21%;
+   width: 1092px;
+   height: 633px;
+   background: #fff;
+   border: 2px solid #000;
+   margin: auto;
+}
+
+.form-popup .form-box {
+    display: flex;
+}
+
+.form-box .form-details {
+    width: 1092px;
+    height: 633px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(jellyfish.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.form-box h2 {
+    text-align: left;
+    margin-right: 400px;
+    margin-bottom: 450px;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-box h3 {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 110px;
+    color: #000;
+}
+
+h4 {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #394e95;
+    margin-top: -10px;
+}
+
+
+.form-box .form-content {
+    width: 100%;
+    padding: 20px;
+    background-image: url(logo.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position-y: 25px;
+    background-position-x: 220px;
+    
+}
+
+
+form .input-field {
+    height: 30px;
+    width: 470px;
+    padding: 25px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+
+form .input-field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 15px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+} 
+
+.input-field input:focus {
+    border-color: #1E3274;
+}
+.input-field input:is(:focus, :valid) {
+    padding: 16px 15px 0;
+}
+
+form .input-field label {
+    position: relative;
+    top: -240%;
+    left: 10px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.2s ease;  
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+    color: #000;
+    font: size 15px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: right;
+}
+
+.form-box a {
+    color: #000;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box .forgot-pass {
+    display: flex;
+    margin-left: 35px;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container .button { 
+    width: 296px;
+    display: block; 
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px 0;
+    background-color: #1E3274;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+form button:hover {
+    background-color: #1E3274;
+}
+
+.form-box .bottom-link {
+    text-align: center;
+}
+    
+p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.forgot-pass {
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bottom-link {
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
