@@ -269,6 +269,9 @@ button a:hover{
 .card-content .profilePic {
     position: absolute;
     border-radius: 100%;
+    outline-style: solid;
+    outline-color: #1E3274;
+    outline-width: thin;
     top: 70px;
     left: 50px;
     width: 50px;
