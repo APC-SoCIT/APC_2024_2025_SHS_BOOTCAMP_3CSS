@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jelly-Aid Challenges</title>
+  <link rel="icon" href="images/Jellyfish.png" type="image/png">
+  <link rel="stylesheet" href="challenges.css" />
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <!-- Logo and Navigation Bar -->
+      <a href="#" class="logo"><img src="Jellyfish.png" alt="JELLY"></a>
+      <nav class="navbar"> 
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Challenges</a></li>
+        <li><a href="https://87d6-2001-fd8-17c5-d65-441b-aad-5dc5-ac3d.ngrok-free.app/">Camera</a></li>
+      <a href="account" class="profile"><img src="images/profile.png" alt="" style="height: 50px; width: 50px;"></a>
+      </nav>
+    </header>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Quiz Section -->
+      <section class="quiz-section">
+        <img src="luhlang/bg2.png" alt="" class="background">
+        <header class="header1">
+          <button class="close-btn">&times;</button>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 0%;"></div> </div>
+        </header>
+        <!-- Quiz Box -->
+        <div class="quiz-box">
+          <h2 class="question-text"></h2> 
+          <p class="instruction-text">Choose the correct answer</p> 
+          <div class="option-list">
+          </div>
+          <!-- Quiz footer -->
+          <div class="quiz-footer">
+            <span class="question-total"></span>
+            <button class="next-btn">Next</button>
+          </div>
+        </div>
+        <!-- Result Box -->
+        <div class="result-box">
+          <h2>Quiz Result</h2>
+          <div class="percentage-container">
+            <div class="circular-progress">
+              <span class="progress-value">0%</span>
+            </div>
+
+            <span class="score-text">Your score 0 out of 5</span>
+          </div>
+          <div class="buttons">
+            <button class="tryAgain-btn">Try Again</button>
+            <button class="goHome-btn">Go To Home</button> </div>
+        </div>
+      </section>
+      <!-- Home Section and Levels Section-->
+      <div class="home">
+        <img src="images/bg2.png" alt="Ocean Background" class="background">
+
+        <div class="level level1 active" style="top: 70%; left: 70%;" data-level="1">1</div>
+        <div class="level level2" style="top: 70%; left: 30%;" data-level="2">2</div>
+        <div class="level level3" style="top: 40%; left: 5%;" data-level="3">3</div>
+        <div class="level level4" style="top: 40%; left: 50%;" data-level="4">4</div>
+        <div class="level level5" style="top: 20%; left: 80%;" data-level="5">5</div>
+        <div class="level level6" style="top: 20%; left: 27%;" data-level="6">6</div>
+      </div>
+    </div>
+  </main>
+  <!-- Popups for Quiz Information -->
+  <div class="popup-info">
+    <h2>Quiz Guide</h2>
+    <span class="info">1. Choose the best answer to the question.</span>
+    <span class="info">2. Achieve 80% or more to unlock the next level!</span>
+    <span class="info">3. You can retry any level you've failed.</span>
+    <span class="info">4. Learn and have fun!</span>
+
+    <div class="btn-group">
+      <button class="info-btn exit-btn">Exit Quiz</button>
+      <a href="#" class="info-btn continue-btn">Continue</a>
+    </div>
+  </div>
+  <div class="popup-info1">
+    <span class="info1">Special Challenge! <br> Come back next week.</span>
+    <div class="btn-group1">
+      <button class="info-btn1 exit-btn1">Exit Quiz</button>
+    </div>
+  </div>
+  <div class="popup-info2">
+    <span class="info2">LOCKED!! <br> Complete previous levels to unlock.</span>
+    <div class="btn-group2">
+      <button class="info-btn2 exit-btn2">Exit Quiz</button>
+    </div>
+  </div>
+
+  <script src="question.js"></script>
+  <script src="challenges.js"></script>
+</body>
+</html>
