@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="login css.css">
   </head>
   <body>
+    <script src="conpass2.js"></script>
   <h1>Jelly-Aid SIGN UP Form</h1>
     <!--Pop up Form-->
     <div class="form-popup">
@@ -17,33 +18,33 @@
           </div>
           <div class="form-content">
             <h3>Welcome to JELLY-AID!</h3>
-            <!-- sample 
-            <h4> Register and learn because a person who use sign language has a unique perspective on the world, a perspective we should all seek to understand.</h4>
-          -->
             <h4><span>Register </span>and learn because a person who use sign language has a unique perspective on the world, a perspective we should all seek to understand.</h4>
-            <form action="#">
+            <form action="Login.html" method="post">
               <div class="input-field">
-                <input type="text"> 
+                <input type="text" required placeholder="e.g., Johanna Del Rosario"> 
                 <label>Full Name</label>
               </div>
               <div class="input-field">
-                <input type="text">
+                <input type="text" required placeholder="e.g., noa_ahh">
                 <label>Username</label>
               </div>
               <div class="input-field">
-                <input type="text">
+                <input type="text" required placeholder="e.g., jcdelrosario@student.apc.edu.ph">
                 <label>Email Address</label>
               </div>
               <div class="input-pass">
-                <input type="password">
+                <input type="password" required 
+                placeholder="Min 8 chars, 1 uppercase, 1 lowercase, 1 number"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                title=" Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number">
                 <label>Password</label>
               </div>
               <div class="input-conpass">
-                <input type="password">
+                <input type="password" required placeholder=" Re-enter your password">
                 <label> Confirm Password</label>
               </div>
               <div class="container">
-              <a href="Sign up.html" class="button"> Sign Up </a> 
+              <button type="submit" class="button"> Sign Up </button>
             </div>  
             </form>
             <div class="bottom-link">
