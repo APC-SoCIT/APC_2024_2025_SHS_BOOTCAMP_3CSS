@@ -1,0 +1,45 @@
+ document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('passwordInput');
+            const lengthCheck = document.getElementById('lengthCheck');
+            const uppercaseCheck = document.getElementById('uppercaseCheck');
+            const lowercaseCheck = document.getElementById('lowercaseCheck');
+            const numberCheck = document.getElementById('numberCheck');
+
+            if (passwordInput) { // Check if the element exists
+                passwordInput.addEventListener('input', function() {
+                    const password = passwordInput.value;
+
+                    if (password.length >= 8) {
+                        lengthCheck.style.color = 'green';
+                        lengthCheck.innerHTML = '&#10003; Minimum 8 characters';
+                    } else {
+                        lengthCheck.style.color = 'grey';
+                        lengthCheck.innerHTML = 'Minimum 8 characters';
+                    }
+
+                    if (/[A-Z]/.test(password)) {
+                        uppercaseCheck.style.color = 'green';
+                        uppercaseCheck.innerHTML = '&#10003; At least 1 uppercase letter';
+                    } else {
+                        uppercaseCheck.style.color = 'grey';
+                        uppercaseCheck.innerHTML = 'At least 1 uppercase letter';
+                    }
+
+                    if (/[a-z]/.test(password)) {
+                        lowercaseCheck.style.color = 'green';
+                        lowercaseCheck.innerHTML = '&#10003; At least 1 lowercase letter';
+                    } else {
+                        lowercaseCheck.style.color = 'grey';
+                        lowercaseCheck.innerHTML = 'At least 1 lowercase letter';
+                    }
+
+                    if (/\d/.test(password)) {
+                        numberCheck.style.color = 'green';
+                        numberCheck.innerHTML = '&#10003; At least 1 number';
+                    } else {
+                        numberCheck.style.color = 'grey';
+                        numberCheck.innerHTML = 'At least 1 number';
+                    }
+                });
+            }
+        });
