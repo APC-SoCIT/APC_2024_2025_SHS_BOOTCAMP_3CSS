@@ -86,8 +86,9 @@ form .input-field {
 form .input-field input {
     width: 100%;
     height: 100%;
+    text-align: left;
     outline: none;
-    padding: 15px;
+    padding: 10px;
     font-size: 0.95rem;
     border-radius: 30px;
     border: 1px solid #000;
@@ -104,7 +105,7 @@ form .input-pass {
 form .input-pass input {
     width: 100%;
     height: 100%;
-    position: relative;
+    text-align: left;
     top: 1px;
     outline: none;
     font-size: 0.95rem;
@@ -124,6 +125,7 @@ form .input-conpass {
 form .input-conpass input {
     width: 100%;
     height: 100%;
+    text-align: left;
     position: relative;
     top: 5px;
     outline: none;
@@ -132,57 +134,49 @@ form .input-conpass input {
     border: 1px solid #000;
 }
 
-.input-field input:focus {
-    border-color: #1E3274;
-}
-.input-field input:is(:focus, :valid) {
-    padding: 16px 15px 0;
-}
 
 form .input-field label {
     position: relative;
-    top: -240%;
+    top: -255%;
     left: 10px;
     pointer-events: none;
     transition: 0.2s ease;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.input-field label::after {
+    content: "*";
+    color: #ff0000;
+    margin-left: 4px;
+}
+
+.input-pass label::after {
+    content: "*";
+    color: #ff0000;
+    margin-left: 4px;
+}
+
+.input-conpass label::after {
+    content: "*";
+    color: #ff0000;
+    margin-left: 4px;
+}
 form .input-pass label {
-    position: relative;
-    top: -165%;
-    left: 10px;
-    pointer-events: none;
-    transition: 0.2s ease;
-}
-
-form .input-conpass label {
     position: relative;
     top: -155%;
     left: 10px;
     pointer-events: none;
     transition: 0.2s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.input-conpass input:is(:focus, :valid) ~ label {
-    color: #000;
-    font-weight: bold;
+form .input-conpass label {
+    position: relative;
+    top: -150%;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: right;
-}
-
-.input-field input:is(:focus, :valid) ~ label {
-    color: #000;
-    font: size 15px;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: right;
-}
-
-.input-pass input:is(:focus, :valid) ~ label {
-    color: #000;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: right;
 }
 
 .form-box a {
