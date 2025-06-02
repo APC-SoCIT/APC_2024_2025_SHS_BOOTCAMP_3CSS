@@ -7,7 +7,6 @@ body{
     font-size: 12px;
     overflow-x: hidden;
 }
-
 header{
     width: 1140px;
     max-width: 80%;
@@ -18,7 +17,6 @@ header{
     position: relative;
     z-index: 100;
 }
-
 *{
     text-decoration: none;
     margin: 0;
@@ -96,11 +94,10 @@ li{
 }
 li a{
     position: relative;
-    right: 30px;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 40px;
+    margin-right: 25px;
     text-decoration: none;
 }
 li a::after{
@@ -116,19 +113,30 @@ li a::after{
 li a:hover::after{
     width: 100%;
 }
-.PFP {
-    position: absolute;
-    top: 16px;
-    right: 50px;
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    outline-style: solid;
-    outline-color: #1E3274;
-    outline-width: thin;
+.button1,
+.button2{
+    margin-left: 18px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+    transition: width 0.3s ease, color 0.3s ease;
+}
+button a{
+    color: #1E3274;
+    font-weight: bold;
+    font-size: 15px;
+}
+button:hover{
+    background-color: #1E3274;
+    color: white;
+    transition: width 0.3s ease-in-out;
+}
+button a:hover{
+    background-color: #1E3274;
+    color: white;
+    transition: width 0.3s ease-in-out;
 }
  
 /* ------------------------------------------------------------------------------- carousel -------------------------------------------------------------------------------- */
@@ -179,11 +187,7 @@ li a:hover::after{
     font-weight: bolder;
     letter-spacing: 2px;
     font-size: 20px;
-    text-shadow: -0.5px -.5px 0 #000, .5px -.5px 0 #000,
-          -.5px .5px 0 #000, .5px .5px 0 #000; 
-    color: white;
 }
-
 .carousel .list .item .title,
 .carousel .list .item .topic{
     font-size: 5em;
