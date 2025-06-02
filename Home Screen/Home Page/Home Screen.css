@@ -176,6 +176,7 @@ li a:hover::after{
 }
 .carousel .list .item .author,
 .carousel .list .item .des{
+    margin: 5px;
     font-weight: bolder;
     letter-spacing: 2px;
     font-size: 20px;
@@ -193,26 +194,22 @@ li a:hover::after{
 .carousel .list .item .topic{
     color: #AEBEE8;
 }
-.carousel .list .item .buttons{
-    z-index: 1001;
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    z-index: 1001;
+.carousel .list .item .buttons a{
+    position: absolute;
     border: none;
     background-color: #fff;
     letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
+    font-weight: 505;
     color: #1E3274;
+    text-shadow: none;
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 15px;
+    padding: 12px 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
 }
-.carousel .list .item .buttons button:hover{
+.carousel .list .item .buttons a:hover{
     background-color: #1E3274;
     color: #fff;
 }
