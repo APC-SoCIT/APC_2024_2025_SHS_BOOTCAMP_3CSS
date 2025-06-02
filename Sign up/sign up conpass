@@ -1,0 +1,82 @@
+ document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('passwordInput');
+            const lengthCheck = document.getElementById('lengthCheck');
+            const uppercaseCheck = document.getElementById('uppercaseCheck');
+            const lowercaseCheck = document.getElementById('lowercaseCheck');
+            const numberCheck = document.getElementById('numberCheck');
+
+            if (passwordInput) { // Check if the element exists
+                passwordInput.addEventListener('input', function() {
+                    const password = passwordInput.value;
+
+                    if (password.length >= 8) {
+                        lengthCheck.style.color = 'green';
+                        lengthCheck.innerHTML = '&#10003; Minimum 8 characters';
+                    } else {
+                        lengthCheck.style.color = 'grey';
+                        lengthCheck.innerHTML = 'Minimum 8 characters';
+                    }
+
+                    if (/[A-Z]/.test(password)) {
+                        uppercaseCheck.style.color = 'green';
+                        uppercaseCheck.innerHTML = '&#10003; At least 1 uppercase letter';
+                    } else {
+                        uppercaseCheck.style.color = 'grey';
+                        uppercaseCheck.innerHTML = 'At least 1 uppercase letter';
+                    }
+
+                    if (/[a-z]/.test(password)) {
+                        lowercaseCheck.style.color = 'green';
+                        lowercaseCheck.innerHTML = '&#10003; At least 1 lowercase letter';
+                    } else {
+                        lowercaseCheck.style.color = 'grey';
+                        lowercaseCheck.innerHTML = 'At least 1 lowercase letter';
+                    }
+
+                    if (/\d/.test(password)) {
+                        numberCheck.style.color = 'green';
+                        numberCheck.innerHTML = '&#10003; At least 1 number';
+                    } else {
+                        numberCheck.style.color = 'grey';
+                        numberCheck.innerHTML = 'At least 1 number';
+                    }
+                });
+            }
+        });
+         if (passwordInput && confirmPasswordInput && confirmPasswordError) {
+        function checkPasswordsMatch() {
+            // Only check if both fields have content
+            if (passwordInput.value && confirmPasswordInput.value) {
+                if (passwordInput.value === confirmPasswordInput.value) {
+                    confirmPasswordError.style.display = 'none';
+                    confirmPasswordInput.setCustomValidity(''); // Clear custom validation message
+                } else {
+                    confirmPasswordError.style.display = 'block';
+                    confirmPasswordError.textContent = 'Passwords do not match';
+                    confirmPasswordInput.setCustomValidity('Passwords do not match'); // Set custom validation message
+                }
+            } else if (confirmPasswordInput.hasAttribute('required') && confirmPasswordInput.value === '') {
+                // If confirm password is empty and required, let HTML5 handle it
+                confirmPasswordInput.setCustomValidity('Please confirm your password.');
+            } else {
+                confirmPasswordError.style.display = 'none'; // Hide error if empty or not relevant yet
+                confirmPasswordInput.setCustomValidity('');
+            }
+        }
+
+        // Add event listeners to both password fields
+        passwordInput.addEventListener('input', checkPasswordsMatch);
+        confirmPasswordInput.addEventListener('input', checkPasswordsMatch);
+
+        // Optional: Clear error when confirm password field is focused
+        confirmPasswordInput.addEventListener('focus', function() {
+            confirmPasswordError.style.display = 'none';
+            confirmPasswordInput.setCustomValidity(''); // Clear validity when user focuses
+        });
+        // Optional: Re-check when confirm password field loses focus
+        confirmPasswordInput.addEventListener('blur', function() {
+            if (confirmPasswordInput.value !== '' || passwordInput.value !== '') { // Re-check if either has content
+                checkPasswordsMatch();
+            }
+        });
+    }
