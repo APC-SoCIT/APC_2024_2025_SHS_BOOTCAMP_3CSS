@@ -84,34 +84,29 @@ form .input-field input {
     width: 100%;
     height: 100%;
     outline: none;
-    padding: 15px;
+    padding: 10px;
     font-size: 0.95rem;
     border-radius: 30px;
     border: 1px solid #000;
 } 
 
-.input-field input:focus {
-    border-color: #1E3274;
-}
-.input-field input:is(:focus, :valid) {
-    padding: 16px 15px 0;
-}
+
 
 form .input-field label {
     position: relative;
-    top: -240%;
+    text-align: right;
+    top: -250%;
     left: 10px;
     color: #000;
     pointer-events: none;
     transition: 0.2s ease;  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-.input-field input:is(:focus, :valid) ~ label {
-    color: #000;
-    font: size 15px;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: right;
+.input-field label::after {
+    content: "*";
+    color: #ff0000;
+    margin-left: 4px;
 }
 
 .form-box a {
@@ -124,7 +119,8 @@ form .input-field label {
 }
 
 .form-box .forgot-pass {
-    display: flex;
+    display: block;
+    margin-top: 10px;
     margin-left: 35px;
     font-size: 13px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -164,10 +160,6 @@ p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.forgot-pass {
-    font-size: 11px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 .bottom-link {
     font-size: 13px;
