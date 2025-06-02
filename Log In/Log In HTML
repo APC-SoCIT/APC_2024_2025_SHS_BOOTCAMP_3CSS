@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="Sign up css.css">
   </head>
   <body>
-  <h1>Jelly-Aid LOGIN Form</h1>
+    <script src="conpass.js"></script>
+    <h1>Jelly-Aid LOGIN Form</h1>
     <!--Pop up Form-->
     <div class="form-popup">
       <div class="form-box login">
@@ -15,20 +16,24 @@
           <h2>Back</h2>
           <p> JELLY-AID</p>
           </div>
+    <!--Form Content-->
           <div class="form-content">
             <h3>Welcome to JELLY-AID!</h3>
-            <H4> Log in and learn because a person who use sign language has a unique perspective on the world, a perspective we should all seek to understand.</h4>
-            <form action="#">
+            <h4> Log in and learn because a person who use sign language has a unique perspective on the world, a perspective we should all seek to understand.</h4>
+            <form action="Login.html" method="post">
               <div class="input-field">
-                <input type="text">
+                <input type="text"  required placeholder="e.g., noa_ahh">
                 <label>Username</label>
               </div>
               <div class="input-field">
-                <input type="text">
-                <label>Email Address</label>
+                <input type="text" required placeholder="e.g., jcdelrosario@student.apc.edu.ph">
+                <label for="emailInput" >Email Address</label>
               </div>
               <div class="input-field">
-                <input type="password">
+                <input type="password" required 
+                placeholder="Min 8 chars, 1 uppercase, 1 lowercase, 1 number"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number">
                 <label>Password</label>
               </div>
             <div class="forgot-pass">
@@ -36,7 +41,7 @@
               <a href="#">Click here</a>
             </div>
             <div class="container">
-              <a href="Login.html " class="button"> Log In </a> 
+              <button type="submit" class="button"> Log In </button>
             </div>
             </form>
             <div class="bottom-link">
