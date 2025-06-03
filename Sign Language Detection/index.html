@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Hand Gesture Recognition</title>
+    <title>JELLY-AID</title>
+    <link rel="icon" href="templates/logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,6 +36,7 @@
         .navlinks li{
 	        list-style: none;
 	        display: inline-block;
+            transform: translate(0px, -7px);
         }
         .navlinks li a{
 	        position: relative;
@@ -61,18 +63,18 @@
 </head>
 <body>
 
-    <nav class="navbar" style="background: rgba(57, 78, 149, 1); font-family: calibri; padding-right: 20px; padding-left: 0px; position: fixed; width: 100%; top: 0; left: 0;">
-		<div class="navdiv" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 45px; width: 100%;">
-			<div class="logo" style="display: flex; align-items: center;"><img src="templates/logo.png" alt="logo" style="height: 65px; width: 65px; margin-right: 20px; padding-top: 0; cursor: pointer;"><a href="#" style="font-size: 35px; font-weight: 600; color: white; list-style: none; text-decoration: none">JELLY-AID</a></div>
+    <nav class="navbar" style="background: rgba(57, 78, 149, 0.7); font-family: calibri; padding-right: 20px; padding-left: 0px; position: fixed; width: 100%; top: 0; left: 0; height: 80px;">
+		<div class="navdiv" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; width: 100%;">
+			<div class="logo" style="display: flex; align-items: center;"><img src="templates/logo.png" alt="logo" style="height: 65px; width: 65px; margin-right: 20px; padding-top: 0; cursor: pointer; transform: translate(0px, -7px);"><a href="#" style="font-size: 35px; font-weight: 600; color: white; list-style: none; text-decoration: none; transform: translate(0px, -7px);">JELLY-AID</a></div>
 			<ul class="navlinks">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Challenges</a></li>
-				<li><a href="#">Profile</a></li>
+				<li><a href="../3CSS_Jelly-Aid Bootcamp/Home Screen.html">Home</a></li>
+				<li><a href="../Final Challenges/challenges.html">Challenges</a></li>
+				<li><a href="../User Profile/userProfile.html">Profile</a></li>
 			</ul>
 		</div>
 	</nav>
         <h1>Sign Language Camera</h1>
-        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Gesture Recognition Stream" width="900" height="700">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Gesture Recognition Stream" width="700" height="500">
         <p class="word">Perform gestures in front of your webcam!</p>
 
 </body>
