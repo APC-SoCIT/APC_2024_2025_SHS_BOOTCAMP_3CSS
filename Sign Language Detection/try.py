@@ -8,9 +8,7 @@ import math
 import os
 
 # --- Flask App Setup ---
-# Tell Flask to look for templates in the current directory
-app = Flask(__name__, template_folder='.') # <--- IMPORTANT CHANGE HERE!
-                                         # Flask will now look for index.html in the same directory as test.py
+app = Flask(__name__, template_folder='.')
 
 # --- Configuration ---
 # Paths are relative to test.py
